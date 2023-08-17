@@ -9,7 +9,12 @@ class order:
         for i in total_amount:
             s = s + i
         return s
-products = ["san pham 1", "san pham 2"]
-total_amount = [10, 25]
+print("Nhap so san pham")
+n = int(input())
+products = []
+total_amount = []
+for i in range(n):
+    products.append(input())
+    total_amount.append(int(input()))
 a = order("id1", products, total_amount)
-print(a.total_bill(total_amount))
+print("Total amount =", a.total_bill(total_amount))
